@@ -1,0 +1,147 @@
+<mxfile host="app.diagrams.net" modified="2023-05-08T16:07:50.308Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="UST5b3ZfqJseIyT3NjhA" version="21.2.3" type="device">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1194" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-1" target="KtDuC_H_nBhKlsHV4GcM-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-1" target="KtDuC_H_nBhKlsHV4GcM-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-1" target="KtDuC_H_nBhKlsHV4GcM-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-1" target="KtDuC_H_nBhKlsHV4GcM-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-30" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-1" target="KtDuC_H_nBhKlsHV4GcM-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-1" value="Food" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="231" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-2" target="KtDuC_H_nBhKlsHV4GcM-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="611" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-2" target="KtDuC_H_nBhKlsHV4GcM-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-2" value="Waste" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="601" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-3" target="KtDuC_H_nBhKlsHV4GcM-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-3" target="KtDuC_H_nBhKlsHV4GcM-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-3" value="Usage" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="601" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-22" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-4" target="KtDuC_H_nBhKlsHV4GcM-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-4" target="KtDuC_H_nBhKlsHV4GcM-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="402.55176341887613" y="455.134117075056" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-4" value="Category" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="246" y="410" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-5" value="FoodExp" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="231" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-6" value="FoodCategory" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="341" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-8" value="FoodName" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="121" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-9" value="FoodID" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="91" y="100" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-10" value="FoodName" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="543.5" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-11" value="RemovalMethod" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="658.5" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-12" value="FoodCategory" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="191" y="510" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-13" value="PrepMethod" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="301" y="510" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-14" target="KtDuC_H_nBhKlsHV4GcM-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-14" value="FoodLocation" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="91" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-27" value="FoodName" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="546" y="520" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-28" value="WasteQuantity" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="656" y="520" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-29" value="FoodQuantity" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="91" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-33" value="Removing Food" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="406" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-35" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-33" target="KtDuC_H_nBhKlsHV4GcM-3" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="521" y="180" as="sourcePoint" />
+            <mxPoint x="621" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-36" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-33" target="KtDuC_H_nBhKlsHV4GcM-1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="351" y="260" as="sourcePoint" />
+            <mxPoint x="451" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-37" value="Food/Cat Ref" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="221" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-38" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERmany;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-37" target="KtDuC_H_nBhKlsHV4GcM-4" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="451" y="370" as="sourcePoint" />
+            <mxPoint x="441" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-40" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-37" target="KtDuC_H_nBhKlsHV4GcM-1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="451" y="370" as="sourcePoint" />
+            <mxPoint x="551" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-41" value="Track Expired Waste" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="576" y="260" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-42" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-41" target="KtDuC_H_nBhKlsHV4GcM-2" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="451" y="370" as="sourcePoint" />
+            <mxPoint x="551" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtDuC_H_nBhKlsHV4GcM-43" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERone;endFill=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="KtDuC_H_nBhKlsHV4GcM-41" target="KtDuC_H_nBhKlsHV4GcM-3" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="761" y="320" as="sourcePoint" />
+            <mxPoint x="861" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
