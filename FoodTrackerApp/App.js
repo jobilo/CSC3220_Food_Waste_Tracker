@@ -225,14 +225,10 @@ const App = () => {
           <TextInput
             style={styles.textInput}
             placeholder="Enter Food Name"
-            value={foodName}
-            onChangeText={text => setFoodName(text)}
           />
           <TextInput
             style={styles.textInput}
             placeholder="Enter Quantity"
-            value={quantity}
-            onChangeText={text => setQuantity(text)}
             keyboardType="numeric"
           />
           
