@@ -53,11 +53,11 @@ export default function App() {
     })
   }
 
-  function setNotifications() {
+  function setNotifications(){
 
   }
-
-
+  
+  
   return (
     <View style={styles.appContainer}>
       <View style={styles.navContainer}>
@@ -71,23 +71,18 @@ export default function App() {
 
 
       <View style={styles.trackerContainer}>
-        
+        <Text>Begin logging food!</Text>
         <StatusBar style="auto"></StatusBar>
         <View style={styles.rectangle}>
-          <View style={styles.col1}>
+          <View>
             <Text style={styles.trackerText}>SAMPLE</Text>
             <Text style={styles.expireText}>Best by: Date</Text>
           </View>
-          <View style={styles.col2}>
-            <Text style={styles.quantityText}>8</Text>
-          </View>
-          <View style={styles.col3}>
-            <View style={styles.leftIcons}>
-              <Pressable onPress={setNotifications} android_ripple={{ color: '#FFF', borderless: true }}>
-                <Image style={styles.notifyIcon} source={require('./assets/images/bell_on.png')} />
-              </Pressable>
-              <Text style={styles.locationIcon}>Location</Text>
-            </View>
+          <View style={styles.leftIcons}>
+          <Pressable onPress={setNotifications} android_ripple={{ color: '#FFF', borderless: true }}>
+        <Image style={styles.notifyIcon} source={require('./assets/images/bell_on.png')} />
+        </Pressable>
+            <Text style={styles.locationIcon}>Location</Text>
           </View>
         </View>
         <View>
@@ -98,7 +93,6 @@ export default function App() {
             renderItem={(itemData) => {
               return (
                 <FoodItem text={itemData.item.text}
-                  quan={itemData.item.quan}
                   id={itemData.item.id}
                   onDeleteItem={deleteFoodHandler} />
               );
@@ -239,15 +233,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'flex-start'
   },
-  quantityText: {
-    paddingStart: 10,
-    fontSize: 30,
-    fontFamily: '',
-    flex: 1,
-    //backgroundColor:'blue',
-    paddingLeft: 30,
-    paddingVertical: 30
-  },
   trackerText: {
     paddingStart: 10,
     fontSize: 30,
@@ -258,8 +243,7 @@ const styles = StyleSheet.create({
     paddingStart: 10,
     fontSize: 15,
     alignContent: 'stretch',
-    flex: 1,
-    //backgroundColor: 'red'
+    flex: 1
   },
   rectangle: {
     width: 350,
@@ -283,19 +267,8 @@ const styles = StyleSheet.create({
   locationIcon: {
     alignItems: 'flex-end',
     flex: 1,
-    paddingRight: 10,
-    paddingTop: 40,
-    //backgroundColor: 'green'
+    paddingRight: 10
   },
-  col1: {
-    flex: 4
-  },
-  col2: {
-    flex: 1
-  },
-  col3: {
-    flex: 2
-  }
 });
 
 

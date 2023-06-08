@@ -9,7 +9,6 @@ function FoodList(props) {
     const [notifEnabled, setNotifEnabled] = useState(true);
     const [text, setText] = useState('Notifications On');
     const [selected, setSelected] = useState('');
-    /*
     const data = [
         {key:'1',value:'Fruits'},
         {key:'1',value:'Vegetables'},
@@ -18,7 +17,7 @@ function FoodList(props) {
         {key:'4',value:'Dairy'},
         {key:'5',value:'Ready to Eat'},
     ]
-    */
+
     const toggleSwitch = () => {
         if (notifEnabled) {
             setText("Notifications Off")
@@ -40,7 +39,7 @@ function FoodList(props) {
     function quantityInputHandler(enteredQuantity) {
         setEnteredQuantity(enteredQuantity);
     }
-    /*
+
     function renderElement(x){
         if(x = 'y')
            return <Text>data</Text>;
@@ -54,13 +53,13 @@ function FoodList(props) {
             </View>
         )
     }
-    */
+
     function addFoodHandler() {
         console.log(enteredFoodText);
         console.log(enteredExpiryText);
         console.log(enteredQuantity)
         console.log(notifEnabled)
-        props.onAddFood(enteredFoodText,enteredQuantity,enteredExpiryText,notifEnabled);
+        props.onAddFood(enteredFoodText,enteredExpiryText,enteredQuantity,notifEnabled);
         setEnteredFoodText('');
         setEnteredExpiryText('');
         setEnteredQuantity('');
@@ -90,7 +89,7 @@ function FoodList(props) {
                     keyboardType='numeric'
                     placeholder='Enter Item Quantity'
                     onChangeText={quantityInputHandler}
-                    maxLength={10} 
+                    maxLength={10}  //setting limit of input
                     value={enteredQuantity}
                 />
                 <Text>Type of Food Chooser</Text>

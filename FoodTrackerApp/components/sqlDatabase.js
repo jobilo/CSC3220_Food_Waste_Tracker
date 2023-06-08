@@ -1,9 +1,3 @@
-/*
-SQLite database inspired by chelseafarley in https://www.youtube.com/watch?v=1kSLd9oQX7c 
-Pros: Allows for adding, updating, and deleting
-Problem: only allows for name input (no second column)
-*/
-
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 import * as SQLite from 'expo-sqlite'
