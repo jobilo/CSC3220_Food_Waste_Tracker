@@ -47,6 +47,11 @@ const App = () => {
         }
       );
     });
+    setModalVisible(!modalVisible)
+    setFoodName('')
+    setQuantity('')
+    setExpirationDate('')
+    setLocation('')
   };
 
   // Function to delete a record from the database
@@ -74,7 +79,8 @@ const App = () => {
       <View style={styles.rectangle}>
         <View style={styles.col1}>
           <Text style={styles.trackerText}>{item.name}</Text>
-          <Text style={styles.expireText}>Best by:{item.expiration}</Text>
+          <Button title="Delete" onPress={() => deleteRecord(item.id)} />
+          <Text style={styles.expireText}>Best by: {item.expiration}</Text>
         </View>
         <View style={styles.col2}>
           <Text style={styles.quantityText}>{item.quantity}</Text>
@@ -85,8 +91,7 @@ const App = () => {
               <Image style={styles.notifyIcon} source={require('./assets/images/bell_on.png')} />
             </Pressable>
             <Button title="Update" onPress={() => updateRecord(item.id, quantity)} />
-            <Button title="Delete" onPress={() => deleteRecord(item.id)} />
-            <Text style={styles.locationIcon}>{item.location}</Text>
+            <Text style={styles.locationText}>{item.location}</Text>
           </View>
         </View>
       </View>
@@ -104,8 +109,19 @@ const App = () => {
     setNotifEnabled(previousState => !previousState)
   }
 
+
+
   return (
     <View style={styles.appContainer}>
+      
+      <View style={styles.navContainer}>
+        <View style={styles.filterExpire}>
+          <Text>Expire</Text>
+        </View>
+        <View style={styles.filterLocation}>
+          <Text>Location</Text>
+        </View>
+      </View>
 
       <TextInput
         placeholder="New Quantity"
@@ -113,7 +129,7 @@ const App = () => {
         onChangeText={text => setQuantity(text)}
         keyboardType="numeric"
       />
-      
+
       <View style={styles.trackerContainer}>
         <FlatList
           style={{ marginTop: 20 }}
@@ -135,27 +151,31 @@ const App = () => {
         <View style={styles.inputContainer}>
           <Image style={styles.modalimage} source={require('./assets/images/serving_tray.png')} />
           <TextInput
+            style={styles.textInput}
             placeholder="Food Name"
             value={foodName}
             onChangeText={text => setFoodName(text)}
           />
           <TextInput
+            style={styles.textInput}
             placeholder="Quantity"
             value={quantity}
             onChangeText={text => setQuantity(text)}
             keyboardType="numeric"
           />
           <TextInput
+            style={styles.textInput}
             placeholder="Expiration Date"
             value={expirationDate}
             onChangeText={text => setExpirationDate(text)}
           />
           <TextInput
+            style={styles.textInput}
             placeholder="Location"
             value={location}
             onChangeText={text => setLocation(text)}
           />
-          <Text>Type of Food Chooser</Text>
+          <Text>Select type of food</Text>
 
           <View style={styles.notifBox}>
             <View style={styles.notifText}>
@@ -184,7 +204,7 @@ const App = () => {
 
       <View style={styles.editContainer}>
 
-        <View style={styles.test}>
+        <View style={styles.editButtons}>
           <View style={styles.press}>
             <View>
               <Pressable android_ripple={{ color: '#FFF', borderless: true }}
@@ -202,7 +222,7 @@ const App = () => {
             </View>
           </View>
         </View>
-        <View style={styles.test}>
+        <View style={styles.editButtons}>
           <View style={styles.press}>
             <View>
               <Pressable android_ripple={{ color: '#FFF', borderless: true }}>
@@ -256,6 +276,36 @@ const styles = StyleSheet.create({
     columnGap: 100,
     paddingTop: 30,
   },
+  editContainer: {
+    flex: 1,
+    backgroundColor: '#efece8',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  menuContainer: {
+    flex: .5,
+    flexDirection: 'row',
+
+  },
+  pagesContainer: {
+    flexDirection: 'row',
+    columnGap: 60
+  },
+  inputContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#DDE5E3'
+  },
+  trackerContainer: {
+    flex: 3,
+    backgroundColor: '#efece8',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start'
+  },
+  //Filter styling
   filterLocation: {
     width: 60,
     height: 20,
@@ -267,11 +317,10 @@ const styles = StyleSheet.create({
     height: 20,
     backgroundColor: 'gray'
   },
-  editContainer: {
-    flex: 1,
-    backgroundColor: '#efece8',
-    alignItems: 'center',
-    justifyContent: 'center'
+
+  //item edit button stylings
+  editButtons: {
+    flexDirection: 'row'
   },
   press: {
     flexDirection: 'row',
@@ -283,18 +332,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#c7c6bd',
   },
-  test: {
-    flexDirection: 'row'
-  },
-  menuContainer: {
-    flex: .5,
-    flexDirection: 'row',
 
-  },
-  pagesContainer: {
-    flexDirection: 'row',
-    columnGap: 60
-  },
+  //menu image stying
   image: {
     width: 35,
     height: 35,
@@ -302,41 +341,38 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     padding: 20
   },
-  trackerContainer: {
-    flex: 3,
-    backgroundColor: '#efece8',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start'
+  
+  //List styling
+  rectangle: {
+    width: 350,
+    height: 120,
+    backgroundColor: "white",
+    flexDirection: 'row',
+    borderRadius: 5,
+    marginBottom: 10
+  },
+  trackerText: {
+    paddingStart: 10,
+    fontSize: 30,
+    fontFamily: '',
+    flex: 4,
+    backgroundColor: 'yellow'
   },
   quantityText: {
     paddingStart: 10,
     fontSize: 30,
     fontFamily: '',
     flex: 1,
-    //backgroundColor:'blue',
+    backgroundColor: 'blue',
     paddingLeft: 30,
     paddingVertical: 30
-  },
-  trackerText: {
-    paddingStart: 10,
-    fontSize: 30,
-    fontFamily: '',
-    flex: 4
   },
   expireText: {
     paddingStart: 10,
     fontSize: 15,
     alignContent: 'stretch',
     flex: 1,
-    //backgroundColor: 'red'
-  },
-  rectangle: {
-    width: 350,
-    height: 100,
-    backgroundColor: "white",
-    flexDirection: 'row',
-    borderRadius: 5,
-    marginBottom: 10
+    backgroundColor: 'red'
   },
   leftIcons: {
     justifyContent: 'space-evenly',
@@ -350,15 +386,14 @@ const styles = StyleSheet.create({
     alignContent: 'flex-end',
     paddingBottom: 5
   },
-  locationIcon: {
-    alignItems: 'flex-end',
+  locationText: {
     flex: 1,
     paddingRight: 10,
     paddingTop: 40,
-    //backgroundColor: 'green'
+    backgroundColor: 'green'
   },
   col1: {
-    flex: 4
+    flex: 3
   },
   col2: {
     flex: 1
@@ -366,61 +401,19 @@ const styles = StyleSheet.create({
   col3: {
     flex: 2
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
-  inputContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#DDE5E3'
-},
-modalimage: {
+
+  //Input menu styling
+  modalimage: {
     width: 100,
     height: 100,
     margin: 20
-},
-textInput: {
+  },
+  textInput: {
     borderWidth: 1,
     borderColor: "white",
     backgroundColor: "white",
@@ -429,28 +422,28 @@ textInput: {
     color: '#120438',
     borderRadius: 6,
     margin: 5
-},
-buttonContainer: {
+  },
+  buttonContainer: {
     marginTop: 8,
     flexDirection: 'row'
-},
-button: {
+  },
+  button: {
     width: '30%',
     marginHorizontal: 8
-},
-notifBox: {
+  },
+  notifBox: {
     flexDirection: 'row',
     paddingHorizontal: 60,
     paddingVertical: 10
-},
-notifText: {
+  },
+  notifText: {
     flex: 3,
     justifyContent: 'center'
-},
-notifSwitch: {
+  },
+  notifSwitch: {
     flex: 2,
     justifyContent: 'center'
-}
+  }
 });
 
 
