@@ -104,6 +104,8 @@ const App = () => {
     </View>
   );
   const [modalVisible, setModalVisible] = useState(false);
+  const [cartModalVisible, setCartModalVisible] = useState(false);
+  const [wasteModalVisible, setWasteModalVisible] = useState(false);
 
   const toggleSwitch = () => {
     if (notifEnabled) {
@@ -157,26 +159,26 @@ const App = () => {
           <Image style={styles.modalimage} source={require('./assets/images/serving_tray.png')} />
           <TextInput
             style={styles.textInput}
-            placeholder="Food Name"
+            placeholder="Enter Food Name"
             value={foodName}
             onChangeText={text => setFoodName(text)}
           />
           <TextInput
             style={styles.textInput}
-            placeholder="Quantity"
+            placeholder="Enter Quantity"
             value={quantity}
             onChangeText={text => setQuantity(text)}
             keyboardType="numeric"
           />
           <TextInput
             style={styles.textInput}
-            placeholder="Expiration Date"
+            placeholder="Enter Expiration Date"
             value={expirationDate}
             onChangeText={text => setExpirationDate(text)}
           />
           <TextInput
             style={styles.textInput}
-            placeholder="Location"
+            placeholder="Enter Location"
             value={location}
             onChangeText={text => setLocation(text)}
           />
@@ -200,6 +202,62 @@ const App = () => {
             </View>
             <View style={styles.button}>
               <Button title="Add" onPress={addRecord} />
+            </View>
+          </View>
+        </View>
+
+      </Modal>
+
+      <Modal
+        animationType="slide"
+        visible={cartModalVisible}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <View style={styles.inputContainer}>
+          <Image style={styles.modalimage} source={require('./assets/images/serving_tray.png')} />
+          <Text style={{fontSize: 30}}>Shopping List</Text>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Enter Food Name"
+            value={foodName}
+            onChangeText={text => setFoodName(text)}
+          />
+          <TextInput
+            style={styles.textInput}
+            placeholder="Enter Quantity"
+            value={quantity}
+            onChangeText={text => setQuantity(text)}
+            keyboardType="numeric"
+          />
+          
+          <View style={styles.buttonContainer}>
+            <View style={styles.button}>
+              <Button title='Cancel' onPress={() => setCartModalVisible(!cartModalVisible)} color='#f31282'></Button>
+            </View>
+            <View style={styles.button}>
+              <Button title="Add" onPress={() => setCartModalVisible(!cartModalVisible)} />
+            </View>
+          </View>
+        </View>
+
+      </Modal>
+
+      <Modal
+        animationType="slide"
+        visible={wasteModalVisible}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <View style={styles.inputContainer}>
+          <Image style={styles.modalimage} source={require('./assets/images/serving_tray.png')} />
+          <Text style={{fontSize: 30}}>Waste Log</Text>
+          <Image style={{height:350,width:350}} source={require('./assets/images/example-food-waste-graph.png')} />
+          <View style={styles.buttonContainer}>
+            <View style={styles.button}>
+              <Button title='Return Home' onPress={() => setWasteModalVisible(!wasteModalVisible)} color='#f31282'></Button>
             </View>
           </View>
         </View>
@@ -250,12 +308,18 @@ const App = () => {
           <Pressable android_ripple={{ color: '#FFF' }}>
             <Image style={styles.image} source={require('./assets/images/home.png')} />
           </Pressable>
-          <Pressable android_ripple={{ color: '#FFF' }}>
+          <View>
+              <Pressable android_ripple={{ color: '#FFF' }}
+              onPress={() => setCartModalVisible(true)}>
             <Image style={styles.image} source={require('./assets/images/Cart.png')} />
           </Pressable>
-          <Pressable android_ripple={{ color: '#FFF' }}>
+            </View>
+            <View>
+          <Pressable android_ripple={{ color: '#FFF' }}
+          onPress={() => setWasteModalVisible(true)}>
             <Image style={styles.image} source={require('./assets/images/leaf.png')} />
           </Pressable>
+          </View>
         </View>
       </View>
     </View>
