@@ -79,7 +79,10 @@ const App = () => {
       <View style={styles.rectangle}>
         <View style={styles.col1}>
           <Text style={styles.trackerText}>{item.name}</Text>
-          <Button title="Delete" onPress={() => deleteRecord(item.id)} />
+          <Pressable onPress={() => deleteRecord(item.id)}
+          style={styles.deleteButton}>
+            <Text>Delete</Text>
+          </Pressable>
           <Text style={styles.expireText}>Best by: {item.expiration}</Text>
         </View>
         <View style={styles.col2}>
@@ -90,7 +93,10 @@ const App = () => {
             <Pressable android_ripple={{ color: '#FFF', borderless: true }}>
               <Image style={styles.notifyIcon} source={require('./assets/images/bell_on.png')} />
             </Pressable>
-            <Button title="Update" onPress={() => updateRecord(item.id, quantity)} />
+            <Pressable onPress={() => updateRecord(item.id, quantity)}
+            style={styles.updateButton}>
+              <Text>Update</Text>
+            </Pressable>
             <Text style={styles.locationText}>{item.location}</Text>
           </View>
         </View>
@@ -113,7 +119,7 @@ const App = () => {
 
   return (
     <View style={styles.appContainer}>
-      
+
       <View style={styles.navContainer}>
         <View style={styles.filterExpire}>
           <Text>Expire</Text>
@@ -124,6 +130,7 @@ const App = () => {
       </View>
 
       <TextInput
+        style={styles.newQuantityText}
         placeholder="New Quantity"
         value={quantity}
         onChangeText={text => setQuantity(text)}
@@ -132,7 +139,6 @@ const App = () => {
 
       <View style={styles.trackerContainer}>
         <FlatList
-          style={{ marginTop: 20 }}
           data={itemList}
           keyExtractor={item => item.id.toString()}
           renderItem={renderItem}
@@ -142,7 +148,6 @@ const App = () => {
 
       <Modal
         animationType="slide"
-        transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
           Alert.alert('Modal has been closed.');
@@ -303,19 +308,34 @@ const styles = StyleSheet.create({
     flex: 3,
     backgroundColor: '#efece8',
     alignItems: 'flex-start',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    marginVertical: 10
   },
-  //Filter styling
+  //Filter styling & new quantity button
   filterLocation: {
-    width: 60,
-    height: 20,
-    backgroundColor: 'gray',
-
+    borderWidth: 1,
+    backgroundColor: "lightgray",
+    width: '25%',
+    borderRadius: 6,
+    margin: 5,
+    paddingLeft: 5
   },
   filterExpire: {
-    width: 60,
-    height: 20,
-    backgroundColor: 'gray'
+    borderWidth: 1,
+    backgroundColor: "lightgray",
+    width: '25%',
+    borderRadius: 6,
+    margin: 5,
+    paddingLeft:5,
+  },
+  newQuantityText:{
+    borderWidth: 1,
+    borderColor: "white",
+    backgroundColor: "white",
+    width: '25%',
+    padding: 5,
+    borderRadius: 6,
+    margin: 5
   },
 
   //item edit button stylings
@@ -341,11 +361,11 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     padding: 20
   },
-  
+
   //List styling
   rectangle: {
     width: 350,
-    height: 120,
+    height: 115,
     backgroundColor: "white",
     flexDirection: 'row',
     borderRadius: 5,
@@ -354,16 +374,16 @@ const styles = StyleSheet.create({
   trackerText: {
     paddingStart: 10,
     fontSize: 30,
-    fontFamily: '',
-    flex: 4,
-    backgroundColor: 'yellow'
+    fontFamily: 'Roboto',
+    flex: 3.5,
+    //backgroundColor: 'yellow'
   },
   quantityText: {
     paddingStart: 10,
     fontSize: 30,
     fontFamily: '',
     flex: 1,
-    backgroundColor: 'blue',
+    //backgroundColor: 'blue',
     paddingLeft: 30,
     paddingVertical: 30
   },
@@ -372,39 +392,52 @@ const styles = StyleSheet.create({
     fontSize: 15,
     alignContent: 'stretch',
     flex: 1,
-    backgroundColor: 'red'
+    //backgroundColor: 'red'
   },
   leftIcons: {
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     alignItems: 'flex-end',
     flex: 3
   },
   notifyIcon: {
     width: 35,
     height: 35,
-    justifyContent: 'flex-start',
-    alignContent: 'flex-end',
-    paddingBottom: 5
   },
   locationText: {
-    flex: 1,
-    paddingRight: 10,
-    paddingTop: 40,
-    backgroundColor: 'green'
+    //backgroundColor: 'green',
+    alignContent: 'flex-end'
   },
   col1: {
-    flex: 3
+    flex: 5
   },
   col2: {
-    flex: 1
+    flex: 2
   },
   col3: {
-    flex: 2
+    flex: 2,
+    marginRight: 3
   },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
+  },
+  deleteButton: {
+    borderWidth: 1,
+    backgroundColor: "lightgray",
+    width: '30%',
+    borderRadius: 6,
+    marginBottom: 5,
+    marginHorizontal: 5,
+    paddingHorizontal: 3
+  },
+  updateButton:{
+    borderWidth: 1,
+    backgroundColor: "lightgray",
+    width: '70%',
+    borderRadius: 6,
+    marginVertical: 7,
+    paddingHorizontal: 3
   },
 
   //Input menu styling
