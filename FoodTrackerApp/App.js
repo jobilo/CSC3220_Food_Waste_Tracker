@@ -70,6 +70,7 @@ const App = () => {
         fetchData();
       });
     });
+    setQuantity('')
   };
 
   const renderItem = ({ item }) => (
@@ -137,6 +138,7 @@ const App = () => {
         value={quantity}
         onChangeText={text => setQuantity(text)}
         keyboardType="numeric"
+        maxLength={2}
       />
 
       <View style={styles.trackerContainer}>
@@ -162,6 +164,7 @@ const App = () => {
             placeholder="Enter Food Name"
             value={foodName}
             onChangeText={text => setFoodName(text)}
+            maxLength={10}
           />
           <TextInput
             style={styles.textInput}
@@ -169,6 +172,7 @@ const App = () => {
             value={quantity}
             onChangeText={text => setQuantity(text)}
             keyboardType="numeric"
+            maxLength={2}
           />
           <TextInput
             style={styles.textInput}
