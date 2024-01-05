@@ -5,6 +5,6 @@ b: Team Members:
     Jobi Lo
     Prince Nizeyimana
     
-c: Development Project: 
+c: Development Project: Platform, end product is an app.
 
-d: Project Description:
+d: Project Description: Our team designed and created an app that will help users reduce food waste by tracking inventory and quality of all food items users purchase.
